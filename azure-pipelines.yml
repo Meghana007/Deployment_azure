@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- script: echo "Azure DevOps Pipeline Running"
+  displayName: 'Pipeline Test'
+
+- script: python --version
+  displayName: 'Check Python Version'
+
+- script: |
+    ls -la
+  displayName: 'List Files'
