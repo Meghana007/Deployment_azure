@@ -20,5 +20,9 @@ steps:
   displayName: 'Install Dependencies'
 
 - script: |
-    python -c "print('Application Build Successful')"
-  displayName: 'Build Validation'
+    docker --version
+  displayName: 'Check Docker'
+
+- script: |
+    docker build -t deployment-practice .
+  displayName: 'Build Docker Image'
