@@ -2,16 +2,11 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
 steps:
-
-- script: echo "Azure DevOps Pipeline Running"
-  displayName: 'Pipeline Test'
+- script: echo "Hello Azure DevOps"
+  displayName: 'Test Pipeline'
 
 - script: python --version
-  displayName: 'Check Python Version'
-
-- script: |
-    ls -la
-  displayName: 'List Files'
+  displayName: 'Check Python'
